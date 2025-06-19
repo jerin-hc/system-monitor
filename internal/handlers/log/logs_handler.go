@@ -44,4 +44,5 @@ func getMetrics(c *gin.Context) {
 	cleanedCSV := strings.ReplaceAll(r, `\r\n`, "\r\n")
 	c.Header("Content-Type", "text/csv")
 	c.String(200, cleanedCSV)
+	fmt.Println("getMetrics - completed")
 }
